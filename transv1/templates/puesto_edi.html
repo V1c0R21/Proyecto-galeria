@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block content %}
+   <div class="container">
+
+<h3>
+   <CENTER> <b> Puesto </b> </CENTER>
+
+</h3>
+
+  <br>
+<form class="row g-3"  action="/puesto_fedita/{{dat.0}}" method="post">
+   <div class="col-md-6">
+      <label for="codPuesto" class="form-label">Código de Puesto</label>
+      <input type="text" class="form-control" name="codPuesto" id="codPuesto" value="{{dat.1}}"></input>
+   </div>
+
+
+
+   <div class="col-md-12">
+      <label for="nomPuesto" class="form-label">Nombre del Puesto</label>
+      <input type="text" class="form-control" name="nomPuesto" id="nomPuesto" value="{{dat.2}}"></input>
+   </div>
+
+    <div class="col-md-12">
+        <label for="reqFisicos" class="form-label">Requisitos Físicos</label>
+        <input type="text" class="form-control" name="reqFisicos" id="reqFisicos" value="{{dat.3}}" ></input>
+    </div>
+    <div class="col-md-12">
+        <label for="reqPsicologicos" class="form-label">Requisitos Psicológicos</label>
+        <input type="text" class="form-control" name="reqPsicologicos" id="reqPsicologicos" value="{{dat.4}}" ></input>
+    </div>
+    <div class="col-md-12">
+        <label for="responsabilidades" class="form-label">Responsabilidades</label>
+        <input type="text" class="form-control" name="responsabilidades" id="responsabilidades" value="{{dat.5}}" ></input>
+    </div>
+    <div class="col-md-12">
+        <label for="condicionesTrabajo" class="form-label">Condiciones de Trabajo</label>
+        <input type="text" class="form-control" name="condicionesTrabajo" id="condicionesTrabajo" value="{{dat.6}}" ></input>
+    </div>
+
+
+
+
+   <div class="col-md-12">
+          <button type="submit" class="btn btn-danger">Enviar</button>
+    </div>
+</form>
+{% endblock %}

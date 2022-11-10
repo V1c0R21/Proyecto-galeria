@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+<br>
+<center><h1><strong>Puesto</strong></h1></center>
+<center><table width="80%" border="0" cellpadding="2%"></table></center>
+<tr>
+<td>
+<table class="table">
+<thead>
+<tr>
+<th class="table-dark" scope="col">Nombre del Puesto</th>
+<td class="table-dark"></td>
+<td class="table-dark"><center><a class="btn btn-danger"
+href="/puesto_agregar" role="button">Agregar nuevo puesto</a></center></td>
+
+</tr>
+</thead>
+<tbody>
+<table class="table table-striped table-danger">
+{% for i in pue %}
+<tr>
+<td width="55%">{{i.1}}</td>
+<td width="15%"><center><a class="btn btn-danger"
+href="/puesto_fdetalle/{{i.0}}" role="button">Detalle</a></center></td>
+<td width="15%"><center><a class="btn btn-danger"
+
+href="/puesto_editar/{{i.0}}" role="button">Editar</a></center></td>
+
+<td width="15%"><center><a class="btn btn-outline-danger"
+
+href="/puesto_borrar/{{i.0}}" role="button">Borrar</a></center></td>
+
+</tr>
+{% endfor %}
+</table>
+</tbody>
+</table>
+<h3>
+
+<h3><CENTER> <b> Detalle: </b> </CENTER></h3>
+
+<br>
+<form class="row g-3" action="/puesto_fdetalle/" method="GET">
+
+
+
+<div class="col-md-6">
+<label for="codPuesto" class="form-label">Código de Puesto</label>
+<input type="text" class="form-control" name="codPuesto" id="codPuesto" value="{{dat.1}}"
+readonly="readonly"></input>
+</div>
+
+
+<br>
+<div class="col-md-12">
+<label for="nomPuesto" class="form-label">Nombre del Puesto</label>
+<input type="text" class="form-control" name="nomPuesto" id="nomPuesto" value="{{dat.2}}"
+readonly="readonly"></input>
+</div>
+
+
+
+<div class="col-md-12">
+<label for="reqFisicos" class="form-label">Requisitos Físicos</label>
+<input type="text" class="form-control" name="reqFisicos" id="reqFisicos" value="{{dat.3}}"
+readonly="readonly"></input>
+</div>
+<div class="col-md-12">
+<label for="reqPsicologicos" class="form-label">Requisitos Psicológicos</label>
+
+<input type="text" class="form-control" name="reqPsicologicos" id="reqPsicologicos" value="{{dat.4}}" readonly="readonly"></input>
+</div>
+<div class="col-md-12">
+<label for="responsabilidades" class="form-label">Responsabilidades</label>
+<input type="text" class="form-control" name="responsabilidades" id="responsabilidades" value="{{dat.5}}" readonly="readonly"></input>
+</div>
+<div class="col-md-12">
+<label for="condicionesTrabajo" class="form-label">Condiciones de Trabajo</label>
+<input type="text" class="form-control" name="condicionesTrabajo" id="condicionesTrabajo" value="{{dat.6}}" readonly="readonly"></input>
+</div>
+
+</form>
+</div>
+{% endblock %}

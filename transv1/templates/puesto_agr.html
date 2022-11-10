@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+<h3>
+<CENTER> <b> Agregar Puesto </b> </CENTER>
+</h3>
+<br>
+<center><div class="col-md-8"></div></center>
+<form class="row g-3" action="/puesto_fagrega" method="post">
+<div class="col-md-6">
+<label for="codPuesto" class="form-label">Código de Puesto</label>
+<input type="text" class="form-control" name="codPuesto" id="codPuesto" required></input>
+</div>
+
+<div class="col-md-12">
+<label for="nomPuesto" class="form-label">Nombre del Puesto</label>
+<input type="text" class="form-control" name="nomPuesto" id="nomPuesto" required></input>
+</div>
+
+<div class="col-md-12">
+<label for="reqFisicos" class="form-label">Requisitos Físicos</label>
+<input type="text" class="form-control" name="reqFisicos" id="reqFisicos"required></input>
+</div>
+<div class="col-md-12">
+<label for="reqPsicologicos" class="form-label">Requisitos Psicológicos</label>
+<input type="text" class="form-control" name="reqPsicologicos"
+
+id="reqPsicologicos"required></input>
+</div>
+<div class="col-md-12">
+<label for="responsabilidades" class="form-label">Responsabilidades</label>
+<input type="text" class="form-control" name="responsabilidades"
+
+id="responsabilidades"required></input>
+</div>
+<div class="col-md-12">
+<label for="condicionesTrabajo" class="form-label">Condiciones de Trabajo</label>
+<input type="text" class="form-control" name="condicionesTrabajo"
+
+id="condicionesTrabajo"required></input>
+</div>
+
+<div class="col-12">
+<button type="submit" class="btn btn-danger">Enviar</button>
+</div>
+</form>
+</div>
+
+</div>
+{% endblock %}
